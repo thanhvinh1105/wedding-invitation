@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're Invited</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f5f0eb;
+            color: #4a4a4a;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #3d2817;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            margin: 0 auto 40px;
+            box-shadow: 0 10px 30px rgba(61, 40, 23, 0.2);
+        }
+
+        .greeting {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .guest-name {
+            font-size: 48px;
+            font-weight: 400;
+            color: #2d2d2d;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .invitation-text {
+            font-size: 28px;
+            color: #6b4423;
+            margin-bottom: 40px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .message {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .enter-btn {
+            display: inline-block;
+            background-color: #6b4423;
+            color: white;
+            padding: 18px 50px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(107, 68, 35, 0.3);
+        }
+
+        .enter-btn:hover {
+            background-color: #552f15;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(107, 68, 35, 0.4);
+        }
+
+        .decorative-line {
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #6b4423, transparent);
+            margin: 40px auto;
+        }
+
+        .hearts {
+            font-size: 24px;
+            color: #6b4423;
+            margin-bottom: 30px;
+            letter-spacing: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .guest-name {
+                font-size: 36px;
+            }
+
+            .invitation-text {
+                font-size: 24px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+
+            .enter-btn {
+                padding: 16px 40px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-icon">✦</div>
+        
+        <div class="greeting">Dear</div>
+        <h1 class="guest-name" id="guestName">Guest</h1>
+        
+        <div class="decorative-line"></div>
+        
+        <p class="invitation-text">You are cordially invited</p>
+        
+        <p class="message">
+            We would be honored to have you join us as we celebrate our wedding day. 
+            Your presence would make our special day even more meaningful.
+        </p>
+
+        <div class="hearts">♡ ♡ ♡</div>
+        
+        <a href="invitation.html" class="enter-btn">View Invitation</a>
+    </div>
+
+    <script>
+        // Get the guest name from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const guestName = urlParams.get('guest');
+        
+        // Update the page with the guest's name
+        if (guestName) {
+            document.getElementById('guestName').textContent = decodeURIComponent(guestName);
+        } else {
+            // Default text if no name provided
+            document.getElementById('guestName').textContent = 'Honored Guest';
+        }
+    </script>
+</body>
+</html>
