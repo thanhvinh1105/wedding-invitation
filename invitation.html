@@ -87,6 +87,23 @@
             background-color: #552f15;
         }
 
+        .lang-btn {
+            background: none;
+            border: 2px solid #6b4423;
+            color: #6b4423;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Georgia', serif;
+        }
+
+        .lang-btn:hover {
+            background-color: #6b4423;
+            color: white;
+        }
+
         /* Hero Section */
         .hero {
             display: flex;
@@ -546,6 +563,7 @@
             </div>
         </div>
         <ul class="nav-links">
+            <li><button onclick="toggleLanguage()" class="lang-btn" id="langBtn">ភាសាខ្មែរ</button></li>
             <li><a href="#rsvp" class="rsvp-btn">RSVP</a></li>
         </ul>
     </nav>
@@ -555,28 +573,31 @@
             <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Wedding invitation with rings">
         </div>
         <div class="hero-content">
-            <h1>We're getting married</h1>
-            <p>With joy in our hearts, we invite you to join us as we begin our forever together. Your presence means the world to us.</p>
+            <h1 data-en="We're getting married" data-km="យើងកំពុងរៀបការ">We're getting married</h1>
+            <p data-en="With joy in our hearts, we invite you to join us as we begin our forever together. Your presence means the world to us." 
+               data-km="ដោយក្តីរីករាយក្នុងចិត្តរបស់យើង យើងសូមអញ្ជើញអ្នកឱ្យមកចូលរួមជាមួយយើង នៅពេលយើងចាប់ផ្តើមជីវិតជាមួយគ្នារហូត។ វត្តមានរបស់អ្នកមានន័យយ៉ាងសំខាន់សម្រាប់យើង។">
+                With joy in our hearts, we invite you to join us as we begin our forever together. Your presence means the world to us.
+            </p>
             
             <div class="event-details">
                 <div class="event-item">
                     <span class="event-icon">✦</span>
-                    <span>Sunday, November 29</span>
+                    <span data-en="Sunday, November 29" data-km="ថ្ងៃអាទិត្យ ទី២៩ ខែវិច្ឆិកា">Sunday, November 29</span>
                 </div>
                 <div class="event-item">
                     <span class="event-icon">♡</span>
-                    <span>Reception • 6:00 PM</span>
+                    <span data-en="Reception • 6:00 PM" data-km="ពិធីជប់លៀង • ម៉ោង ៦:០០ ល្ងាច">Reception • 6:00 PM</span>
                 </div>
             </div>
 
             <div class="reception-note">
                 <span class="heart-icon">♡</span>
-                <span>Reception to follow</span>
+                <span data-en="Reception to follow" data-km="ពិធីជប់លៀងនឹងបន្តបន្ទាប់">Reception to follow</span>
             </div>
 
             <div class="cta-buttons">
                 <a href="#rsvp" class="btn btn-primary">RSVP</a>
-                <a href="#details" class="btn btn-secondary">Details</a>
+                <a href="#details" class="btn btn-secondary" data-en="Details" data-km="ព័ត៌មានលម្អិត">Details</a>
             </div>
         </div>
     </section>
@@ -594,19 +615,27 @@
             
             <div class="detail-cards">
                 <div class="detail-card">
-                    <h3>Ceremony</h3>
-                    <p>Gather with us as we exchange vows surrounded by love. Find the time and date for this special occasion.</p>
-                    <p style="margin-top: 20px; font-size: 18px; color: #6b4423; font-weight: 600;">Sunday, November 29</p>
-                    <p style="font-size: 24px; color: #2d2d2d; font-weight: 500; margin-top: 8px;">6:00 PM</p>
+                    <h3 data-en="Ceremony" data-km="ពិធីមង្គលការ">Ceremony</h3>
+                    <p data-en="Gather with us as we exchange vows surrounded by love. Find the time and date for this special occasion." 
+                       data-km="ចូលរួមជាមួយយើងនៅពេលយើងផ្លាស់ប្តូរសម្បថក្នុងសេចក្តីស្រឡាញ់។ ស្វែងរកពេលវេលា និងកាលបរិច្ឆេទសម្រាប់ពេលវេលាពិសេសនេះ។">
+                        Gather with us as we exchange vows surrounded by love. Find the time and date for this special occasion.
+                    </p>
+                    <p style="margin-top: 20px; font-size: 18px; color: #6b4423; font-weight: 600;" data-en="Sunday, November 29" data-km="ថ្ងៃអាទិត្យ ទី២៩ ខែវិច្ឆិកា">Sunday, November 29</p>
+                    <p style="font-size: 24px; color: #2d2d2d; font-weight: 500; margin-top: 8px;" data-en="6:00 PM" data-km="ម៉ោង ៦:០០ ល្ងាច">6:00 PM</p>
                 </div>
                 
                 <div class="detail-card">
-                    <h3>Reception</h3>
-                    <p>Continue the celebration with an evening of joy, laughter, and connection as we start our new chapter.</p>
+                    <h3 data-en="Reception" data-km="ពិធីជប់លៀង">Reception</h3>
+                    <p data-en="Continue the celebration with an evening of joy, laughter, and connection as we start our new chapter." 
+                       data-km="បន្តការប្រារព្ធជាមួយនឹងរាត្រីនៃក្តីរីករាយ សំណើច និងការតភ្ជាប់ នៅពេលយើងចាប់ផ្តើមជំពូកថ្មីរបស់យើង។">
+                        Continue the celebration with an evening of joy, laughter, and connection as we start our new chapter.
+                    </p>
                     <p class="location-name" style="margin-top: 20px;">Mai House Saigon Hotel</p>
                     <a href="https://www.google.com/maps/search/?api=1&query=Mai+House+Saigon+Hotel" 
                        target="_blank" 
-                       class="map-btn">
+                       class="map-btn"
+                       data-en="View on Google Maps"
+                       data-km="មើលនៅលើ Google Maps">
                         View on Google Maps
                     </a>
                 </div>
@@ -616,38 +645,41 @@
 
     <section id="rsvp" class="rsvp-section">
         <div class="rsvp-container">
-            <h2 class="rsvp-title">Join Us</h2>
-            <p class="rsvp-subtitle">We would be honored by your presence. Please let us know if you can make it.</p>
+            <h2 class="rsvp-title" data-en="Join Us" data-km="ចូលរួមជាមួយយើង">Join Us</h2>
+            <p class="rsvp-subtitle" data-en="We would be honored by your presence. Please let us know if you can make it." 
+               data-km="យើងនឹងមានកិត្តិយសសម្រាប់វត្តមានរបស់អ្នក។ សូមប្រាប់យើងថាតើអ្នកអាចមកបានទេ។">
+                We would be honored by your presence. Please let us know if you can make it.
+            </p>
             
-            <form class="rsvp-form" action="https://formspree.io/f/xzddbkza" method="POST" id="rsvpForm">
+            <form class="rsvp-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="rsvpForm">
                 <div class="form-group">
-                    <label for="name"> Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    <label for="name" data-en="Full Name *" data-km="ឈ្មោះពេញ *">Full Name *</label>
+                    <input type="text" id="name" name="name" required data-placeholder-en="Enter your name" data-placeholder-km="បញ្ចូលឈ្មោះរបស់អ្នក" placeholder="Enter your name">
                 </div>
 
                 <div class="form-group">
-                    <label for="attendance">Will you be attending? *</label>
+                    <label for="attendance" data-en="Will you be attending? *" data-km="តើអ្នកនឹងចូលរួមទេ? *">Will you be attending? *</label>
                     <select id="attendance" name="attendance" required>
-                        <option value="">Please select</option>
-                        <option value="yes">Yes, I'll be there!</option>
-                        <option value="no">Sorry, I can't make it</option>
+                        <option value="" data-en="Please select" data-km="សូមជ្រើសរើស">Please select</option>
+                        <option value="yes" data-en="Yes, I'll be there!" data-km="បាទ/ចាស ខ្ញុំនឹងទៅ!">Yes, I'll be there!</option>
+                        <option value="no" data-en="Sorry, I can't make it" data-km="សូមអភ័យទោស ខ្ញុំមិនអាចទៅបានទេ">Sorry, I can't make it</option>
                     </select>
                 </div>
 
                 <div class="form-group" id="guestCountGroup" style="display: none;">
-                    <label for="guestCount">Number of Guests *</label>
+                    <label for="guestCount" data-en="Number of Guests *" data-km="ចំនួនភ្ញៀវ *">Number of Guests *</label>
                     <select id="guestCount" name="guestCount">
-                        <option value="1">1 Guest</option>
-                        <option value="2">2 Guests</option>
+                        <option value="1" data-en="1 Guest" data-km="១ នាក់">1 Guest</option>
+                        <option value="2" data-en="2 Guests" data-km="២ នាក់">2 Guests</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="dietaryRestrictions">Dietary Restrictions or Special Requests</label>
-                    <textarea id="dietaryRestrictions" name="dietaryRestrictions" rows="4" placeholder="Please let us know if you have any dietary restrictions or special requests..."></textarea>
+                    <label for="dietaryRestrictions" data-en="Dietary Restrictions or Special Requests" data-km="កម្រិតអាហារ ឬសំណើពិសេស">Dietary Restrictions or Special Requests</label>
+                    <textarea id="dietaryRestrictions" name="dietaryRestrictions" rows="4" data-placeholder-en="Please let us know if you have any dietary restrictions or special requests..." data-placeholder-km="សូមប្រាប់យើងថាតើអ្នកមានកម្រិតអាហារ ឬសំណើពិសេសណាមួយ..." placeholder="Please let us know if you have any dietary restrictions or special requests..."></textarea>
                 </div>
 
-                <button type="submit" class="submit-btn">Send RSVP</button>
+                <button type="submit" class="submit-btn" data-en="Send RSVP" data-km="ផ្ញើការឆ្លើយតប">Send RSVP</button>
                 
                 <div id="formMessage" class="form-message"></div>
             </form>
@@ -655,6 +687,33 @@
     </section>
 
     <script>
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'km' : 'en';
+            
+            // Update button text
+            const langBtn = document.getElementById('langBtn');
+            langBtn.textContent = currentLang === 'en' ? 'ភាសាខ្មែរ' : 'English';
+            
+            // Update all elements with data-en and data-km attributes
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(el => {
+                const text = el.getAttribute(`data-${currentLang}`);
+                if (text) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = el.getAttribute(`data-placeholder-${currentLang}`) || text;
+                    } else if (el.tagName === 'OPTION') {
+                        el.textContent = text;
+                    } else if (el.tagName === 'LABEL' || el.tagName === 'BUTTON' || el.tagName === 'A') {
+                        el.textContent = text;
+                    } else {
+                        el.textContent = text;
+                    }
+                }
+            });
+        }
+
         // Show/hide guest count based on attendance
         document.getElementById('attendance').addEventListener('change', function() {
             const guestCountGroup = document.getElementById('guestCountGroup');
