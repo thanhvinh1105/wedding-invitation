@@ -81,6 +81,8 @@
             border-radius: 6px;
             font-weight: 500;
             transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
         .rsvp-btn:hover {
@@ -102,6 +104,36 @@
         .lang-btn:hover {
             background-color: #6b4423;
             color: white;
+        }
+
+        /* Mobile Menu Toggle */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #6b4423;
+            transition: all 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
         }
 
         /* Hero Section */
@@ -211,46 +243,6 @@
 
         .btn-secondary:hover {
             background-color: #c4b5a7;
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .hero {
-                flex-direction: column;
-                padding: 40px 30px;
-                gap: 50px;
-            }
-
-            .hero-content h1 {
-                font-size: 56px;
-            }
-
-            nav {
-                padding: 20px 30px;
-            }
-
-            .nav-links {
-                gap: 20px;
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero-content h1 {
-                font-size: 42px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                text-align: center;
-            }
         }
 
         /* Details Section */
@@ -389,35 +381,6 @@
             background-color: #552f15;
         }
 
-        @media (max-width: 968px) {
-            .details-section {
-                padding: 80px 30px;
-            }
-
-            .details-container {
-                flex-direction: column;
-                gap: 50px;
-            }
-
-            .section-title {
-                font-size: 42px;
-            }
-
-            .detail-card:hover {
-                transform: translateY(-5px);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .section-title {
-                font-size: 36px;
-            }
-
-            .detail-card {
-                padding: 30px 25px;
-            }
-        }
-
         /* RSVP Section */
         .rsvp-section {
             padding: 100px 60px;
@@ -540,7 +503,44 @@
             border: 1px solid #f5c6cb;
         }
 
-        @media (max-width: 768px) {
+        /* Responsive - Tablet */
+        @media (max-width: 968px) {
+            nav {
+                padding: 20px 30px;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding: 40px 30px;
+                gap: 50px;
+            }
+
+            .hero-content h1 {
+                font-size: 56px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                font-size: 14px;
+            }
+
+            .details-section {
+                padding: 80px 30px;
+            }
+
+            .details-container {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            .section-title {
+                font-size: 42px;
+            }
+
+            .detail-card:hover {
+                transform: translateY(-5px);
+            }
+
             .rsvp-section {
                 padding: 80px 30px;
             }
@@ -551,6 +551,172 @@
 
             .rsvp-form {
                 padding: 35px 25px;
+            }
+        }
+
+        /* Responsive - Mobile */
+        @media (max-width: 640px) {
+            /* Mobile Navigation */
+            nav {
+                padding: 15px 20px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: #f5f0eb;
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+                border-bottom: 1px solid #e0d5c7;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a,
+            .rsvp-btn,
+            .lang-btn {
+                display: block;
+                width: 100%;
+                padding: 12px 15px;
+                text-align: center;
+            }
+
+            .rsvp-btn {
+                padding: 12px 15px;
+            }
+
+            .lang-btn {
+                padding: 10px 15px;
+            }
+
+            /* Hero Section */
+            .hero {
+                padding: 30px 20px;
+                gap: 30px;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+                padding: 14px 20px;
+            }
+
+            /* Details Section */
+            .details-section {
+                padding: 50px 20px;
+                background-attachment: scroll;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .detail-card {
+                padding: 30px 25px;
+            }
+
+            .detail-cards {
+                gap: 30px;
+            }
+
+            /* RSVP Section */
+            .rsvp-section {
+                padding: 50px 20px;
+            }
+
+            .rsvp-title {
+                font-size: 36px;
+            }
+
+            .rsvp-subtitle {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            .rsvp-form {
+                padding: 25px 15px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 16px;
+            }
+
+            .submit-btn {
+                font-size: 16px;
+            }
+
+            /* Details Hero Text */
+            .details-hero h2 {
+                font-size: 36px !important;
+            }
+
+            .details-hero p {
+                font-size: 14px !important;
+            }
+        }
+
+        /* Very Small Devices */
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 12px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-content p {
+                font-size: 15px;
+            }
+
+            .event-item,
+            .reception-note {
+                font-size: 14px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .rsvp-title {
+                font-size: 32px;
+            }
+
+            .detail-card h3 {
+                font-size: 22px;
+            }
+
+            .form-group label {
+                font-size: 14px;
             }
         }
     </style>
@@ -564,9 +730,14 @@
                 <div>invitation</div>
             </div>
         </div>
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
             <li><button onclick="toggleLanguage()" class="lang-btn" id="langBtn">ភាសាខ្មែរ</button></li>
-            <li><a href="#rsvp" class="rsvp-btn">RSVP</a></li>
+            <li><a href="#rsvp" class="rsvp-btn" onclick="closeMenu()">RSVP</a></li>
         </ul>
     </nav>
 
@@ -598,8 +769,8 @@
             </div>
 
             <div class="cta-buttons">
-                <a href="#rsvp" class="btn btn-primary">RSVP</a>
-                <a href="#details" class="btn btn-secondary" data-en="Details" data-km="ព័ត៌មានលម្អិត">Details</a>
+                <a href="#rsvp" class="btn btn-primary" onclick="closeMenu()">RSVP</a>
+                <a href="#details" class="btn btn-secondary" data-en="Details" data-km="ព័ត៌មានលម្អិត" onclick="closeMenu()">Details</a>
             </div>
         </div>
     </section>
@@ -668,7 +839,7 @@
                 </div>
 
                 <div style="text-align: center;">
-                    <a href="#rsvp" class="details-btn">RSVP Now</a>
+                    <a href="#rsvp" class="details-btn" onclick="closeMenu()">RSVP Now</a>
                 </div>
             </div>
             
@@ -706,7 +877,7 @@
         <div class="rsvp-container">
             <h2 class="rsvp-title" data-en="Join Us" data-km="ចូលរួមជាមួយយើង">Join Us</h2>
             <p class="rsvp-subtitle" data-en="We would be honored by your presence. Please let us know if you can make it." 
-               data-km="យើងនឹងមានកិត្តិយសសម្រាប់វត្តមានរបស់អ្នក។ សូមប្រាប់យើងថាតើអ្នកអាចមកបានទេ។">
+               data-km="យើងនឹងមានកិត្តិយПодії សម្រាប់វត្តមានរបស់អ្នក។ សូមប្រាប់យើងថាតើអ្នកអាចមកបានទេ។">
                 We would be honored by your presence. Please let us know if you can make it.
             </p>
             
@@ -747,6 +918,20 @@
 
     <script>
         let currentLang = 'en';
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
 
         function toggleLanguage() {
             currentLang = currentLang === 'en' ? 'km' : 'en';
