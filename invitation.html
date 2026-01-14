@@ -108,27 +108,24 @@
         .hero {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 80px 60px;
-            max-width: 1400px;
-            margin: 0 auto;
-            gap: 80px;
+            justify-content: center;
+            padding: 60px 30px;
+            min-height: calc(100vh - 80px);
+            background-color: #f5f0eb;
         }
 
         .hero-image {
-            flex: 1;
-            max-width: 600px;
-        }
-
-        .hero-image img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            display: none;
         }
 
         .hero-content {
-            flex: 1;
-            max-width: 600px;
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            padding: 80px 60px;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border: 1px solid #e8dfd5;
         }
 
         .hero-content h1 {
@@ -301,13 +298,11 @@
         /* Responsive */
         @media (max-width: 968px) {
             .hero {
-                flex-direction: column;
-                padding: 40px 30px;
-                gap: 50px;
+                padding: 40px 20px;
             }
 
-            .hero-content h1 {
-                font-size: 56px;
+            .hero-content {
+                padding: 60px 40px;
             }
 
             nav {
@@ -330,20 +325,12 @@
         }
 
         @media (max-width: 640px) {
-            .hero-content h1 {
-                font-size: 42px;
+            .hero-content {
+                padding: 50px 30px;
             }
 
             .logo-text {
                 display: none;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                text-align: center;
             }
 
             .lang-btn {
@@ -368,7 +355,8 @@
             .families-divider {
                 position: static;
                 transform: none;
-                margin: 10px 0;
+                margin: 20px 0;
+                width: 100%;
             }
 
             .couple-section {
@@ -377,15 +365,12 @@
             }
 
             .ampersand {
-                margin: 10px 0;
-            }
-
-            .couple-side.right {
-                text-align: center;
+                margin: 15px 0;
+                font-size: 60px;
             }
 
             .couple-name {
-                font-size: 36px;
+                font-size: 40px;
             }
 
             .wedding-header {
@@ -710,13 +695,8 @@
     </nav>
 
     <section class="hero">
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Wedding invitation with rings">
-        </div>
         <div class="hero-content">
             <div class="wedding-header" data-en="WEDDING DETAIL" data-km="ព័ត៌មានលម្អិតអំពីអាពាហ៍ពិពាហ៍">WEDDING DETAIL</div>
-            
-            <div class="decorative-ornament">✦</div>
             
             <div class="parents-section">
                 <div class="parent-group left">
@@ -725,7 +705,10 @@
                     <div class="parent-name">Le Nguyen</div>
                     <div class="parent-name">Ngoc Lan</div>
                 </div>
-                <div class="families-divider" data-en="Together with their families" data-km="រួមគ្នាជាមួយគ្រួសារ">Together with their families</div>
+                <div class="families-divider">
+                    <div class="divider-ornament">◆━◆</div>
+                    <div class="divider-text" data-en="Together with their families" data-km="រួមគ្នាជាមួយគ្រួសារ">Together with their families</div>
+                </div>
                 <div class="parent-group right">
                     <div class="parent-name">Thy Ra</div>
                     <div class="parent-name">Hoeun Heng</div>
@@ -748,7 +731,9 @@
                 </div>
             </div>
 
-            <div class="decorative-ornament">✦</div>
+            <div class="bottom-ornament">
+                <div class="ornament-design">◆━◆</div>
+            </div>
         </div>
     </section>
 
