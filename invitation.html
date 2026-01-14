@@ -58,7 +58,7 @@
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 20px;
             list-style: none;
             align-items: center;
         }
@@ -77,7 +77,7 @@
         .rsvp-btn {
             background-color: #6b4423;
             color: white !important;
-            padding: 12px 35px;
+            padding: 12px 28px;
             border-radius: 6px;
             font-weight: 500;
             transition: background-color 0.3s;
@@ -91,9 +91,9 @@
             background: none;
             border: 2px solid #6b4423;
             color: #6b4423;
-            padding: 10px 20px;
+            padding: 10px 18px;
             border-radius: 6px;
-            font-size: 15px;
+            font-size: 14px;
             cursor: pointer;
             transition: all 0.3s;
             font-family: 'Georgia', serif;
@@ -144,6 +144,91 @@
             line-height: 1.7;
             color: #666;
             margin-bottom: 40px;
+        }
+
+        .wedding-header {
+            text-align: center;
+            font-size: 20px;
+            color: #d4776e;
+            letter-spacing: 3px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .parents-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            gap: 40px;
+        }
+
+        .parent-group {
+            flex: 1;
+        }
+
+        .parent-group.left {
+            text-align: left;
+        }
+
+        .parent-group.right {
+            text-align: right;
+        }
+
+        .parent-name {
+            font-size: 18px;
+            color: #7a8b6b;
+            font-weight: 500;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .request-text {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #7a8b6b;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .couple-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            gap: 40px;
+        }
+
+        .couple-side {
+            flex: 1;
+        }
+
+        .couple-side.left {
+            text-align: left;
+        }
+
+        .couple-side.right {
+            text-align: right;
+        }
+
+        .couple-label {
+            font-size: 16px;
+            color: #7a8b6b;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .couple-name {
+            font-size: 42px;
+            font-weight: 400;
+            color: #7a8b6b;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .event-details {
@@ -230,7 +315,16 @@
             }
 
             .nav-links {
-                gap: 20px;
+                gap: 15px;
+            }
+
+            .lang-btn {
+                padding: 8px 15px;
+                font-size: 13px;
+            }
+
+            .rsvp-btn {
+                padding: 10px 22px;
                 font-size: 14px;
             }
         }
@@ -240,7 +334,7 @@
                 font-size: 42px;
             }
 
-            .nav-links {
+            .logo-text {
                 display: none;
             }
 
@@ -250,6 +344,42 @@
 
             .btn {
                 text-align: center;
+            }
+
+            .lang-btn {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .rsvp-btn {
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+
+            .parents-section {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .parent-group.right {
+                text-align: left;
+            }
+
+            .couple-section {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .couple-side.right {
+                text-align: left;
+            }
+
+            .couple-name {
+                font-size: 32px;
+            }
+
+            .wedding-header {
+                font-size: 18px;
             }
         }
 
@@ -573,26 +703,32 @@
             <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Wedding invitation with rings">
         </div>
         <div class="hero-content">
-            <h1 data-en="We're getting married" data-km="យើងកំពុងរៀបការ">We're getting married</h1>
-            <p data-en="With joy in our hearts, we invite you to join us as we begin our forever together. Your presence means the world to us." 
-               data-km="ដោយក្តីរីករាយក្នុងចិត្តរបស់យើង យើងសូមអញ្ជើញអ្នកឱ្យមកចូលរួមជាមួយយើង នៅពេលយើងចាប់ផ្តើមជីវិតជាមួយគ្នារហូត។ វត្តមានរបស់អ្នកមានន័យយ៉ាងសំខាន់សម្រាប់យើង។">
-                With joy in our hearts, we invite you to join us as we begin our forever together. Your presence means the world to us.
-            </p>
+            <div class="wedding-header" data-en="WEDDING DETAIL" data-km="ព័ត៌មានលម្អិតអំពីអាពាហ៍ពិពាហ៍">WEDDING DETAIL</div>
             
-            <div class="event-details">
-                <div class="event-item">
-                    <span class="event-icon">✦</span>
-                    <span data-en="Sunday, November 29" data-km="ថ្ងៃអាទិត្យ ទី២៩ ខែវិច្ឆិកា">Sunday, November 29</span>
+            <div class="parents-section">
+                <div class="parent-group left">
+                    <div class="parent-name">Tran Thanh Son</div>
+                    <div class="parent-name">Le Nguyen Ngoc Lan</div>
                 </div>
-                <div class="event-item">
-                    <span class="event-icon">♡</span>
-                    <span data-en="Reception • 6:00 PM" data-km="ពិធីជប់លៀង • ម៉ោង ៦:០០ ល្ងាច">Reception • 6:00 PM</span>
+                <div class="parent-group right">
+                    <div class="parent-name">Thy Ra</div>
+                    <div class="parent-name">Hoeun Heng</div>
                 </div>
             </div>
 
-            <div class="reception-note">
-                <span class="heart-icon">♡</span>
-                <span data-en="Reception to follow" data-km="ពិធីជប់លៀងនឹងបន្តបន្ទាប់">Reception to follow</span>
+            <div class="request-text" data-en="Cordially request your presence to celebrate the wedding of our children" data-km="សូមអញ្ជើញអ្នកឱ្យមកប្រារព្ធពិធីមង្គលការរបស់កូនរបស់យើង">
+                Cordially request your presence to celebrate<br>the wedding of our children
+            </div>
+
+            <div class="couple-section">
+                <div class="couple-side left">
+                    <div class="couple-label" data-en="GROOM" data-km="កូនប្រុស">GROOM</div>
+                    <div class="couple-name">Vinh<br>Tran</div>
+                </div>
+                <div class="couple-side right">
+                    <div class="couple-label" data-en="BRIDE" data-km="កូនស្រី">BRIDE</div>
+                    <div class="couple-name">Helice<br>Chhean</div>
+                </div>
             </div>
 
             <div class="cta-buttons">
@@ -651,7 +787,7 @@
                 We would be honored by your presence. Please let us know if you can make it.
             </p>
             
-            <form class="rsvp-form" action="https://formspree.io/f/xzddbkza" method="POST" id="rsvpForm">
+            <form class="rsvp-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="rsvpForm">
                 <div class="form-group">
                     <label for="name" data-en="Full Name *" data-km="ឈ្មោះពេញ *">Full Name *</label>
                     <input type="text" id="name" name="name" required data-placeholder-en="Enter your name" data-placeholder-km="បញ្ចូលឈ្មោះរបស់អ្នក" placeholder="Enter your name">
