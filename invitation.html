@@ -293,19 +293,21 @@
             position: relative;
         } */
 
-        .details-section {
+   .details-section {
     padding: 100px 60px;
     background-image: url('images/photo8.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    position: relative;
+    min-height: 100vh;
 }
 
-/* Mobile fix */
 @media (max-width: 768px) {
     .details-section {
-        background-position: center; /* show top part of image */
+        background-attachment: scroll;
+        background-size: contain; /* prevents cutting off center */
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 
