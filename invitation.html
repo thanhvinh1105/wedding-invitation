@@ -284,23 +284,30 @@
         }
 
         /* Details Section */
-        .details-section {
-            padding: 100px 60px;
-            background-image: url('images/photo8.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: scroll;
-            position: relative;
-        } 
-        @media (max-width: 768px) {
+.details-section {
+    padding: 100px 60px;
+    background-image: url('images/photo8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    position: relative;
+}
+
+@media (max-width: 968px) {
+    .details-section {
+        padding: 80px 30px;
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 640px) {
     .details-section {
         background-attachment: scroll;
-        background-size: contain; 
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
 }
-
  /*  .details-section {
     padding: 100px 60px;
     background-image: url('images/photo8.jpg');
