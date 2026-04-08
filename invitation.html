@@ -1178,8 +1178,7 @@
             } else {
                 langBtn.textContent = 'English';
             } */
-
-        let currentLang = 'en';
+let currentLang = 'en';
 
 function changeLanguage() {
     const dropdown = document.getElementById('langDropdown');
@@ -1203,24 +1202,6 @@ function changeLanguage() {
         }
     });
 }
-            
-            // Update all elements with data-en, data-km, and data-vi attributes
-            const elements = document.querySelectorAll('[data-en]');
-            elements.forEach(el => {
-                const text = el.getAttribute(`data-${currentLang}`);
-                if (text) {
-                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                        el.placeholder = el.getAttribute(`data-placeholder-${currentLang}`) || text;
-                    } else if (el.tagName === 'OPTION') {
-                        el.textContent = text;
-                    } else if (el.tagName === 'LABEL' || el.tagName === 'BUTTON' || el.tagName === 'A') {
-                        el.textContent = text;
-                    } else {
-                        el.innerHTML = text;
-                    }
-                }
-            });
-        }
 
         // Show/hide guest count based on attendance
         document.getElementById('attendance').addEventListener('change', function() {
