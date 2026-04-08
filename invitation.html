@@ -92,7 +92,7 @@
             background-color: #552f15;
         }
 
-        .lang-btn {
+        /* .lang-btn {
             background: none;
             border: 2px solid #6b4423;
             color: #6b4423;
@@ -107,7 +107,28 @@
         .lang-btn:hover {
             background-color: #6b4423;
             color: white;
-        }
+        }*/
+
+        .lang-dropdown {
+    background-color: white;
+    border: 2px solid #6b4423;
+    color: #6b4423;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', serif;
+    transition: all 0.3s;
+}
+
+.lang-dropdown:hover {
+    background-color: #f5f0eb;
+}
+
+.lang-dropdown:focus {
+    outline: none;
+    border-color: #552f15;
+}
 
         /* Hero Section */
         .hero {
@@ -266,10 +287,14 @@
                 gap: 12px;
             }
 
-            .lang-btn {
+           /* .lang-btn {
                 padding: 8px 12px;
                 font-size: 12px;
-            }
+            } */
+            .lang-dropdown {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
 
             .rsvp-btn {
                 padding: 8px 18px;
@@ -867,10 +892,22 @@
                 <div>invitation</div>
             </div>
         </div>
-        <ul class="nav-links">
+        <!-- <ul class="nav-links">
             <li><button onclick="toggleLanguage()" class="lang-btn" id="langBtn">ភាសាខ្មែរ</button></li>
             <li><a href="#rsvp" class="rsvp-btn">RSVP</a></li>
-        </ul>
+        </ul> -->
+
+        <!-- BUTTON -->
+        <ul class="nav-links"> 
+    <li>
+        <select class="lang-dropdown" id="langDropdown" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="km">ភាសាខ្មែរ</option>
+            <option value="vi">Tiếng Việt</option>
+        </select>
+    </li>
+    <li><a href="#rsvp" class="rsvp-btn">RSVP</a></li>
+</ul>
     </nav>
 
     <section class="hero">
@@ -1120,7 +1157,7 @@
     </section>
 
     <script>
-        let currentLang = 'en';
+        /*let currentLang = 'en';
 
         function toggleLanguage() {
             // Cycle through languages: en -> km -> vi -> en
@@ -1140,7 +1177,31 @@
                 langBtn.textContent = 'Tiếng Việt';
             } else {
                 langBtn.textContent = 'English';
+            } */
+
+        let currentLang = 'en';
+
+function changeLanguage() {
+    const dropdown = document.getElementById('langDropdown');
+    currentLang = dropdown.value;
+    
+    // Update all elements with data-en, data-km, and data-vi attributes
+    const elements = document.querySelectorAll('[data-en]');
+    elements.forEach(el => {
+        const text = el.getAttribute(`data-${currentLang}`);
+        if (text) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = el.getAttribute(`data-placeholder-${currentLang}`) || text;
+            } else if (el.tagName === 'OPTION') {
+                el.textContent = text;
+            } else if (el.tagName === 'LABEL' || el.tagName === 'BUTTON' || el.tagName === 'A') {
+                el.textContent = text;
+            } else {
+                el.innerHTML = text;
             }
+        }
+    });
+}
             
             // Update all elements with data-en, data-km, and data-vi attributes
             const elements = document.querySelectorAll('[data-en]');
